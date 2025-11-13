@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Galletas Miel 🍯</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Bienvenidos a Cafetería Galletas Miel 🍪</h1>
+  </header>
+
+  <!-- Banner principal -->
+  <section class="banner-inicio">
+    <div class="banner-overlay">
+      <h2>Endulza tu día con sabor y ternura 🍯</h2>
+      <p>Postres, café y miel artesanal hechos con amor 💛</p>
+      <button class="btn-principal" onclick="window.location.href='menu.html'">Ver nuestro menú</button>
+    </div>
+    <img src="banner1.jpg" alt="Ambiente cálido de la cafetería">
+  </section>
+
+  <!-- Galería destacada -->
+  <section class="galeria-inicio">
+    <img src="postres.jpg" alt="Postres artesanales con miel">
+    <img src="cafetera.jpg" alt="Café artesanal servido con amor">
+  </section>
+
+  <!-- Presentación -->
+  <section class="presentacion">
+    <h2>✨ Donde cada bocado cuenta una historia</h2>
+    <p class="descripcion-inicio">
+      Galletas, postres y cafés artesanales preparados con miel natural y una pizca de cariño.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info">
+      <p>📍 Dirección: Av. Dulce 123, Ciudad Miel</p>
+      <p>📞 Teléfono: +593 999 888 777</p>
+      <p>🕐 Horario: Lunes a Sábado, 8:00 a 20:00</p>
+    </div>
+
+    <div class="footer-redes">
+      <a href="https://facebook.com" target="_blank">🌐 Facebook</a> |
+      <a href="https://instagram.com" target="_blank">📸 Instagram</a> |
+      <a href="https://wa.me/593999888777" target="_blank">💬 WhatsApp</a>
+    </div>
+
+    <p class="copyright">© 2025 Cafetería Galletas Miel | Todos los derechos reservados 🍯</p>
+  </footer>
+
+  <script>
+    // Animaciones suaves con ScrollReveal
+    ScrollReveal().reveal('header', { duration: 1000, origin: 'top', distance: '40px' });
+    ScrollReveal().reveal('.banner-overlay', { duration: 1200, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('.galeria-inicio img', { interval: 200, scale: 0.9 });
+    ScrollReveal().reveal('.presentacion', { duration: 1000, origin: 'bottom', distance: '60px' });
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú - Cafetería Galletas Miel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <h1>Nuestro Menú 🍯</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html" class="activo">Menú</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- catálogo -->
+    <section class="catalogo">
+      <h2>Nuestros Postres y Bebidas</h2>
+
+      <!-- FILTROS / CATEGORÍAS (opcional) -->
+      <div class="menu-categorias">
+        <button class="categoria-btn activo" data-cat="todos">Todos</button>
+        <button class="categoria-btn" data-cat="postres">Postres</button>
+        <button class="categoria-btn" data-cat="bebidas">Bebidas</button>
+      </div>
+
+      <div class="productos-grid" id="productos">
+        <!-- Producto 1 -->
+        <article class="producto-card" data-categoria="postres" data-nombre="Galletas de miel" data-precio="2.50">
+          <img src="galleta-miel.jpg" alt="Galletas de miel">
+          <h4>Galletas de miel</h4>
+          <p class="desc">Crujientes, dulces y con un toque de amor 🍯</p>
+          <div class="precio-row">
+            <span>$2.50</span>
+            <button class="add-btn">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto-card" data-categoria="postres" data-nombre="Cheesecake artesanal" data-precio="3.00">
+          <img src="cheesecake.jpg" alt="Cheesecake artesanal">
+          <h4>Cheesecake artesanal</h4>
+          <p class="desc">Suave, cremoso y perfecto para compartir 💛</p>
+          <div class="precio-row">
+            <span>$3.00</span>
+            <button class="add-btn">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="producto-card" data-categoria="bebidas" data-nombre="Café con miel" data-precio="2.00">
+          <img src="cafe-miel.jpg" alt="Café con miel">
+          <h4>Café con miel</h4>
+          <p class="desc">Aromático y naturalmente dulce ☕🐝</p>
+          <div class="precio-row">
+            <span>$2.00</span>
+            <button class="add-btn">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="producto-card" data-categoria="bebidas" data-nombre="Latte de vainilla con miel" data-precio="2.80">
+          <img src="latte-vainilla.jpg" alt="Latte de vainilla con miel">
+          <h4>Latte de vainilla con miel</h4>
+          <p class="desc">Suave, cremoso con un toque de miel natural.</p>
+          <div class="precio-row">
+            <span>$2.80</span>
+            <button class="add-btn">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="producto-card" data-categoria="postres" data-nombre="Tarta de frutas frescas" data-precio="3.50">
+          <img src="tarta-frutas.jpg" alt="Tarta de frutas frescas">
+          <h4>Tarta de frutas frescas</h4>
+          <p class="desc">Base crujiente, frutas naturales y toque de miel 💐</p>
+          <div class="precio-row">
+            <span>$3.50</span>
+            <button class="add-btn">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto 6 -->
+         <article class="producto-card" data-categoria="postres" data-nombre="Cupcake de miel y canela" data-precio="2.80">
+  <img src="cupcake-miel.jpg" alt="Cupcake de miel y canela">
+  <h4>Cupcake de miel y canela</h4>
+  <p class="desc">Suave, esponjoso y con el toque perfecto de miel 🍯</p>
+  <div class="precio-row">
+    <span>$2.80</span>
+    <button class="add-btn">Agregar</button>
+  </div>
+</article>
+      </div>
+    </section>
+
+    <!-- carrito -->
+    <aside class="carrito">
+      <h3>🛒 Tu Carrito</h3>
+      <div id="carritoItems"></div>
+      <p><strong>Total: $<span id="total">0.00</span></strong></p>
+      <button id="vaciarCarritoBtn">Vaciar Carrito</button>
+      <button id="finalizar-compra">Finalizar compra</button>
+
+      <div id="checkoutForm" class="checkout-oculto">
+        <h4>Datos de entrega</h4>
+        <input type="text" id="nombreCliente" placeholder="Nombre completo">
+        <input type="text" id="direccionCliente" placeholder="Dirección">
+        <button id="confirmarBtn">Confirmar</button>
+        <p id="mensajeCompra" class="mensaje-oculto">¡Gracias por tu compra! 🐝</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p>📍 Dirección: Av. Dulce 123, Ciudad Miel</p>
+      <p>📞 Teléfono: +593 999 888 777</p>
+      <p>🕐 Horario: Lunes a Sábado, 8:00 a 20:00</p>
+    </div>
+    <div class="footer-redes">
+      <a href="https://facebook.com" target="_blank">🌐 Facebook</a> |
+      <a href="https://instagram.com" target="_blank">📸 Instagram</a> |
+      <a href="https://wa.me/593999888777" target="_blank">💬 WhatsApp</a>
+    </div>
+    <p class="copyright">© 2025 Cafetería Galletas Miel | Todos los derechos reservados 🍯</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <button id="toggleCarrito">🛒</button>
+  <script>
+document.getElementById("finalizar-compra").addEventListener("click", function() {
+  alert("¡Gracias por tu compra! 🛍️ Tu pedido ha sido procesado con éxito 💖");
+});
+</script>
+</body>
+</html>

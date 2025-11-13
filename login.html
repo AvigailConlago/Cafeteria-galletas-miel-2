@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión - Dulce Tentación</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUser" placeholder="Usuario" required />
+      <input type="password" id="loginPass" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const usuario = document.getElementById("loginUser").value;
+      const pass = document.getElementById("loginPass").value;
+
+      const userData = JSON.parse(localStorage.getItem(usuario));
+
+      if (!userData) {
+        document.getElementById("loginError").textContent = "Usuario no registrado.";
+      } else if (userData.password !== pass) {
+        document.getElementById("loginError").textContent = "Contraseña incorrecta.";
+      } else {
+        alert("¡Bienvenido " + usuario + "!");
+        localStorage.setItem("usuarioActivo", usuario);
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</body>
+</html>

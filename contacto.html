@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Cafetería Galletas Miel</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Quicksand&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- ESTILO DEL FORMULARIO DE CONTACTO --- */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fffaf3;
+      color: #5b3b00;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #1f1e1e;
+      padding: 20px;
+    }
+
+    .contacto {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fffdf7;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(163, 111, 33, 0.2);
+    }
+
+    .contacto h2 {
+      text-align: center;
+      color: #8b5a1f;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .contacto p {
+      text-align: center;
+      color: #6a4a1c;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      color: #704214;
+      font-weight: 600;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #f1d7a7;
+      border-radius: 10px;
+      background-color: #fffaf0;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 15px;
+      color: #5a3c00;
+      transition: all 0.3s ease;
+      margin-bottom: 18px;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #d5a64a;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 8px rgba(213, 166, 74, 0.4);
+    }
+
+    button[type="submit"] {
+      background-color: #d4a056;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+      width: 100%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #b98238;
+      transform: scale(1.03);
+    }
+
+    #mensajeEnviado {
+      display: none;
+      text-align: center;
+      background-color: #fff6e1;
+      border: 2px solid #e6c17d;
+      color: #6b471c;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mapa */
+    .ubicacion {
+      max-width: 800px;
+      margin: 60px auto;
+      text-align: center;
+    }
+
+    .ubicacion h2 {
+      color: #8b5a1f;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .mapa-container iframe {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(100, 70, 20, 0.2);
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #f7e7ce;
+      padding: 20px;
+      text-align: center;
+      color: #5a3c00;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .footer-info p, .footer-redes a {
+      color: #5b3b00;
+      text-decoration: none;
+    }
+
+    .footer-redes a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="Logo de la Cafetería Galletas Miel" class="logo">
+    <h1>Contáctanos 🍯</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="contacto">
+    <h2>¿Tienes alguna pregunta o pedido especial?</h2>
+    <p>Rellena el siguiente formulario y pronto te responderemos con una sonrisa y una taza de café ☕💛</p>
+
+    <form id="contactForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div id="mensajeEnviado">
+      💌 ¡Gracias por contactarnos! Te responderemos muy pronto.
+    </div>
+  </section>
+
+  <section class="ubicacion">
+    <h2>📍 Nuestra Ubicación</h2>
+    <p>Nos encontramos en el corazón de la ciudad, ¡ven a visitarnos!</p>
+    <div class="mapa-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8047077752373!2d-78.49142782505074!3d-0.18065303544459578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a597b8c46af%3A0x74d88a30ff56b674!2sQuito%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1697045306253!5m2!1ses!2sec"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-info">
+      <p>📍 Dirección: Av. Dulce 123, Ciudad Miel</p>
+      <p>📞 Teléfono: +593 999 888 777</p>
+      <p>🕐 Horario: Lunes a Sábado, 8:00 a 20:00</p>
+    </div>
+    <div class="footer-redes">
+      <a href="https://facebook.com" target="_blank">🌐 Facebook</a> |
+      <a href="https://instagram.com" target="_blank">📸 Instagram</a> |
+      <a href="https://wa.me/593999888777" target="_blank">💬 WhatsApp</a>
+    </div>
+    <p class="copyright">© 2025 Cafetería Galletas Miel | Todos los derechos reservados 🍯</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const mensaje = document.getElementById('mensajeEnviado');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.reset();
+      mensaje.style.display = 'block';
+      setTimeout(() => mensaje.style.display = 'none', 4000);
+    });
+  </script>
+</body>
+</html>
